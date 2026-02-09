@@ -86,12 +86,6 @@ if Btot > 0:
     bit_alloc_greedy += 1
     bit_alloc_equal += 1
     bit_alloc_kkt += 1
-else:# 
-    bit_alloc_proposed = np.ones(n)
-    bit_alloc_dp = np.ones(n)
-    bit_alloc_greedy = np.ones(n)
-    bit_alloc_equal = np.ones(n)
-    bit_alloc_kkt = np.ones(n)
 
 
 omega0 = current_D / ((2 ** (bit_alloc_proposed - 1) - 1).astype(np.float64) ** 2) 
@@ -383,3 +377,4 @@ for t in range(T):
     # # m_issgd,     v_issgd     = adam_apply(m_issgd,     v_issgd,     beta_issgd,     grad_issgd,     norm_proposed,     adamparam, adamparam2, t)
     # m_issgd,     v_issgd     = adam_apply(m_issgd,     v_issgd,     beta_issgd,     grad_issgd,     norm_issgd,     adamparam, adamparam2, t)
     
+
